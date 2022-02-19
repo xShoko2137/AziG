@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+.ctnt {
+    background-color: #303339;
+    margin-top: 0px;
+    padding-top: 0px!important;
+    padding: 10px;
+  }
+.ctnt p {
+    color: #fff;
+}
+.ctnt p span{
+    font-size: 13px;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(187, 187, 187);
+}
+.container {
+    padding-top: 150px;
+}
+.commands{
+    background-color: #2f3136;
+    padding: 10px;
+}
+
+.command_name {
+    padding: 10px;
+    background-color: #303339;
+    border-color: #2f3136;
+    border-style: solid;    
+}
+.command_name .name {
+    -webkit-touch-callout: text; 
+    -webkit-user-select: text; 
+     -khtml-user-select: text;
+       -moz-user-select: text; 
+        -ms-user-select: text; 
+            user-select: text; 
+    background-color: #232427;
+    padding: 3px;
+    color: #fff;
+    border:1px solid black;
+    border-radius:5px;
+
+}
+.command_name .opis {
+    color: #fff;
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
+
+}
+.command{
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    margin-top: 5px;
+    border:1px solid black;
+    
+}
+hr {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.445);
+    
+}
+.prefix hr{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.445); 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.uzywanie hr{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.445); 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.uzywanie .info-uzywanie-title {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    padding-left: 10px;
+    color: rgb(228, 228, 228);
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+}
+.prefix .info-prefix-title {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    padding-left: 10px;
+    color: rgb(228, 228, 228);
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+}
+.prefix .info-prefix-info {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    padding-left: 6px;
+    padding-bottom: 10px!important;
+    font-size: 16px!important;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+.uzywanie .info-uzywanie-info {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+    padding-left: 6px;
+    padding-bottom: 10px!important;
+    font-size: 16px!important;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+code { 
+    -webkit-touch-callout: text; 
+    -webkit-user-select: text; 
+     -khtml-user-select: text;
+       -moz-user-select: text; 
+        -ms-user-select: text; 
+            user-select: text; 
+    color: #fff;
+    padding: 0.2rem 0.4rem;
+    font-size: 80%;
+    border-radius: 0.25rem;
+    background: #212122;
+    opacity: 1;
+}
+.info-cmd{
+    background-color: #2f3136;
+}
+
+.info-cmd .prefix .info-prefix-title{
+    background-color: #2f3136;
+}
+
+.info-cmd .prefix .info-prefix-info{
+    background-color: #2f3136;
+}
+.copyright{
+    padding-top: 5%;
+}
+.footer {
+    margin-bottom: 10px!important;
+    color: #fff!important;
+    
+}

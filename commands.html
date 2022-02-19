@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Oficjalna strona bota AziG">
+    <meta name="keywords" content="discord, bot, multi-purpose">
+    <meta name="author" content="AziG Support">
+
+    <title>AziG | Komendy</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="icon" href="img/rocket.png">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logo-azig" src="img/rocket.png" width="30" height="30">AZIG</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toogle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainmenu">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="commands.html">Komendy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="joinsupport()">Support Serwer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="addbot()">Dodaj Bota</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="container">
+                <div class="info-cmd">
+                    <div class="prefix">
+                        <p class="info-prefix-title">PREFIX</p>
+                        <hr class="info-top">
+                        <p class="info-prefix-info">Podstawowy: <code>!</code><br>Przykład użycia <code>!help</code><br>Aby sprawdzić prefix możesz użyć <code>@AziG</code></p>
+                    </div>
+                    <div class="uzywanie">
+                        <p class="info-uzywanie-title">Komendy</p>
+                        <hr class="info-top">
+                        <p class="info-uzywanie-info"><code>/</code> - Musisz wybrać jedną z opcji <br>⚙️ - Komendy z ustawieniami bota. Tylko osoby z permisją "ADMINISTRATOR" mogą użyć tej komendy</p>
+                    </div>
+                </div>
+                <div class="commands">
+                    <div class="command" >
+                        <div class="command_name" id="bot-stats">
+                            <p class="opis"> <span class="name">botstats</span> - Pokazuje informacje na temat bota</p>
+                            
+                        </div>
+                        <div class ="ctnt"id="bot-stats-content" style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>botstats</code></span><br>Komenda służy do pokazywania informacji o bocie.<br><span>ALIASY: <code>BOT</code></span><br><span>KATEGORIA: <code>BOT</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="ping">
+                            <p class="opis"> <span class="name">ping</span> - Pokazuje informacje na temat pingu</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="ping-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>ping</code></span><br>Komenda służy do pokazywania opóźnienia API discorda oraz opóźnienie bota.<br><span>ALIASY: <code>p</code></span><br><span>KATEGORIA: <code>BOT</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="cat">
+                            <p class="opis"> <span class="name">cat</span> - Wysyła zdjęcie kota</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="cat-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>cat</code></span><br>Komenda po użyciu wysyła losowe zdjęcie kota.<br><span>ALIASY: <code>kot</code> <code>kotek</code></span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="dog">
+                            <p class="opis"> <span class="name">dog</span> - Wysyła zdjęcie psa</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="dog-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>dog</code></span><br>Komenda po użyciu wysyła losowe zdjęcie psa.<br><span>ALIASY: <code>piesek</code> <code>piesio</code></span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="gun">
+                            <p class="opis"> <span class="name">gun</span> - Wysyła przerobiony avatar użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="gun-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>gun</code> lub <code>gun @user/User_ID</code> </span><br>Komenda po użyciu przerabia awatar użytkownika i dokleja do niego pistolet a następnie wysyła zdjęcie na kanał.<br><span>ALIASY: <code>pistolet</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="koala">
+                            <p class="opis"> <span class="name">koala</span> - Wysyła zdjęcie koali</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="koala-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>koala</code> </span><br>Komenda po użyciu wysyła losowe zdjęcie koali.<br><span>ALIASY: <code>BRAK</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="panda">
+                            <p class="opis"> <span class="name">panda</span> - Wysyła zdjęcie pandy</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="panda-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>panda</code> </span><br>Komenda po użyciu wysyła losowe zdjęcie pandy.<br><span>ALIASY: <code>BRAK</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="rn">
+                            <p class="opis"> <span class="name">rn</span> - Spróbuj odgadnąć liczbe od 1 - 10</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="rn-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>rn 1-10</code> </span><br>Komenda w której twoim zadaniem jest odgadnąć liczbę którą wybierze bot (od 1 do 10).<br><span>ALIASY: <code>random-number</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="rt">
+                            <p class="opis"> <span class="name">rt</span> - Wysyła treść wiadomości w losowej kolejności</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="rt-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>rt tekst</code> </span><br>Bot po użyciu komendy układa w losowy sposób słowa zawarte w wiadomości i wysyła wiadomość na kanał.<br><span>ALIASY: <code>randomize-text</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="say">
+                            <p class="opis"> <span class="name">say</span> - Powtarza twoją wiadomość</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="say-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>say tekst</code> </span><br>Bot po użyciu komendy wysyła taką samą wiadomość jak ty na kanał.<br><span>ALIASY: <code>BRAK</code> </span><br><span>KATEGORIA: <code>FUN</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="avatar">
+                            <p class="opis"> <span class="name">avatar</span> - Wysyła avatar użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="avatar-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>avatar</code> lub <code>avatar @user/User_ID</code> </span><br>Wysyła avatar oznaczonego użytkownika bądź autora wiadomości.<br><span>ALIASY: <code>BRAK</code> </span><br><span>KATEGORIA: <code>INFO</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="help">
+                            <p class="opis"> <span class="name">help</span> - Wysyła informacje na temat komend</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="help-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>help</code> lub <code>help nazwa komendy</code> </span><br>Bot po użyciu komendy wysyła wszystkie dostępne komendy bądź informacje o danej komendzie<br><span>ALIASY: <code>help</code> <code>pomoc</code> </span><br><span>KATEGORIA: <code>INFO</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="list-emoji">
+                            <p class="opis"> <span class="name">list-emoji</span> - Wysyła informacje na temat komend</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="list-emoji-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>list-emoji</code></span><br>Bot po użyciu komendy wysyła wszystkie dostępne emotki na serwerze w jednej wiadomości<br><span>ALIASY: <code>l-emoji</code> </span><br><span>KATEGORIA: <code>INFO</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="serwer-info">
+                            <p class="opis"> <span class="name">serwer-info</span> - Wysyła informacje na temat serwera</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="serwer-info-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>serwer-info</code></span><br>Bot po użyciu komendy wysyła informacje o serwerze<br><span>ALIASY: <code>sinfo</code> <code>serwer-info</code> </span><br><span>KATEGORIA: <code>INFO</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="user-info">
+                            <p class="opis"> <span class="name">user-info</span> - Wysyła informacje na temat użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="user-info-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>user-info</code> lub <code>user-info @user/User_ID</code></span><br>Bot po użyciu komendy wysyła informacje o podanym użytkowniku<br><span>ALIASY: <code>uinfo</code> </span><br><span>KATEGORIA: <code>INFO</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="ban">
+                            <p class="opis"> <span class="name">ban</span> - Banuje użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="ban-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>ban @user/User_ID</code> lub <code>ban @user/User_ID powód</code></span><br>Banuje podanego użytkownika na serwerze<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>BAN_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="clear-warns">
+                            <p class="opis"> <span class="name">clearwarns</span> - Usuwa wszystkie warny użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="clear-warns-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>clearwarns @user/User_ID</code></span><br>Usuwa wszystkie warny podanemu użytkownikowi<br><span>ALIASY: <code>clwarns</code> </span><br><span>WYMAGANA PERMISJA: <code>KICK_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="emoji-add">
+                            <p class="opis"> <span class="name">emoji-add</span> - Dodaje podane emoji na serwer</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="emoji-add-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>emoji-add emoji</code></span><br>Bot dodaje podane emoji na serwer (Bot nie musi być na serwerze z którego pochodzi emoji)<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>MANAGE_EMOJIS_AND_STICKERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="kick">
+                            <p class="opis"> <span class="name">kick</span> - Wyrzuca osobę z serwera</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="kick-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>kick @user/User_ID</code> lub <code>kick @user/User_ID powód</code></span><br>Bot wyrzuca podaną osobe z serwera<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>KICK_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="msg-edit">
+                            <p class="opis"> <span class="name">msg-edit</span> - Edytuje wiadomość</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="msg-edit-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>msg-edit ID_KANAŁU ID_WIADOMOŚCI Nowa Wiadomość</code> </span><br>Bot edytuje treść swojej wiadomości na podaną<br><span>ALIASY: <code>message-edit</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="poll">
+                            <p class="opis"> <span class="name">poll</span> - Wysyła ankietę na kanał</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="poll-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>poll hexcode Treść Ankiety;|Emotka Treść_Opcji |Emotka Treść_Opcji</code> </span><br>Bot tworzy ankiete (Sam reaguje na wiadomość emotkami mogą pochodzić z innych serwerów, ale bot musi się na serwerze z którego pochodzi emotka znajdować. Maksymalnie 5 emotek)<br><span>ALIASY: <code>ankieta</code> </span><br><span>WYMAGANA PERMISJA: <code>MANAGE_CHANNELS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span> </span><br><span>PRZYKŁAD: <code>poll 21216E Losowa wiadomosc;|⏰ Zegar tutaj sobie smiga |🤓 Okulary sobie tutaj smigaja</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="purge">
+                            <p class="opis"> <span class="name">purge</span> - Usuwa wiadomości z kanału</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="purge-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>purge 1-99</code> </span><br>Bot usuwa podaną ilość wiadomości z kanału<br><span>ALIASY: <code>clear</code> </span><br><span>WYMAGANA PERMISJA: <code>MANAGE_MESSAGES</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="remove-warn">
+                            <p class="opis"> <span class="name">remove-warn</span> - Usuwa podanego warna</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="remove-warn-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>remove-warn @User/User_ID ID_WARNA</code> </span><br>Bot usuwa podanemu użytkownikowi warna o podanym ID<br><span>ALIASY: <code>rm-warn</code> </span><br><span>WYMAGANA PERMISJA: <code>KICK_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="time-out">
+                            <p class="opis"> <span class="name">timeout</span> - Nadaje timeout'a użytkownikowi</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="time-out-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>timeout @User/User_ID</code> lub <code>timeout @User/User_ID Powód</code> </span><br>Nadaje timeout'a na serwerze podanemu użytkownikowi<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>MODERATE_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="un-ban">
+                            <p class="opis"> <span class="name">unban</span> - Usuwa bana użytkownika na serwerze</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="un-ban-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>unban User_ID</code> lub <code>unban User_ID Powód</code> </span><br>Usuwa bana użytkownikowi o podanym ID na serwerze<br><span>ALIASY: <code>UB</code> </span><br><span>WYMAGANA PERMISJA: <code>BAN_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="warn">
+                            <p class="opis"> <span class="name">warn</span> - Nadaje warna użytkownikowi</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="warn-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>warn @User/User_ID</code> lub <code>warn @User/User_ID Powód</code> </span><br>Nadaje warna podanemu użytkownikowi <br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>KICK_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="warns">
+                            <p class="opis"> <span class="name">warns</span> - Wyświetla liste warnów użytkownika</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="warns-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>warns @User/User_ID</code></span><br>Pokazuje wszystkie warny które posiada użytkownik<br><span>ALIASY: <code>warny</code> </span><br><span>WYMAGANA PERMISJA: <code>KICK_MEMBERS</code>/<code>ROLA MODERACYJNA</code></span><br><span>KATEGORIA: <code>MODERACYJNE</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="cmd-channel">
+                            <p class="opis"> ⚙️<span class="name">cmd-channel</span> - Zarządzanie używaniem komend na kanałach</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="cmd-channel-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>cmd-channel on/off/list/delete</code> lub <code>cmd-channel add/remove ID_KANAŁU</code></span><br>Blokuje wysyłanie komend na wszystkich kanałach (Pozwala tylko na określonych)<br> Odblokowywuje możliwość pisania na wszystkich kanałach.<br> Wyświetla liste kanałow na których można używać komendy. <br>Czyści liste kanałow na których można korzystać z komendy<br>Dodaje/Usuwa kanał do listy dozwolonych kanałów<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>USTAWIENIA</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="cmd-off">
+                            <p class="opis"> ⚙️<span class="name">cmd-off</span> - Wyłączanie komend</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="cmd-off-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>cmd-off Nazwa_Komendy</code> </span><br>Blokuje możliwość używania podanej komendy<br><span>ALIASY: <code>command-off</code> <code>cmd-disable</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>USTAWIENIA</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="cmd-on">
+                            <p class="opis"> ⚙️<span class="name">cmd-on</span> - Włączanie komend</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="cmd-on-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>cmd-on Nazwa_Komendy</code> </span><br>Odblokowywuje możliwość używania podanej komendy<br><span>ALIASY: <code>command-on</code> <code>cmd-enable</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>USTAWIENIA</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="set-mod">
+                            <p class="opis"> ⚙️<span class="name">set-mod</span> - Nadawanie/Usuwanie Mod roli</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="set-mod-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>set-mod add ID_ROLI</code> lub <code>set-mod remove ID_ROLI</code></span><br>Komenda pozwala ustawić podaną role jako role moderacyjną bądź usunąć podaną role z ról moderacyjnych (Maksymalnie 3 role moderacyjne na serwer)<br><span>ALIASY: <code>BRAK</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>USTAWIENIA</code></span></p> 
+                        
+                        </div>
+                    </div>
+                    <div class="command">
+                        <div class="command_name" id="set-prefix">
+                            <p class="opis"> ⚙️<span class="name">set-prefix</span> - Ustawia prefix</p>
+                            
+                        </div>
+                        <div class ="ctnt" id="set-prefix-content"style = "display: none;">
+                            <hr>
+                            <p><span>UŻYCIE <code>set-prefix Nowy Prefix</code></span><br>Komenda pozwala ustawić nowy prefix serwerowy (Maksymalnie 3 znaki)<br><span>ALIASY: <code>prefix</code> </span><br><span>WYMAGANA PERMISJA: <code>ADMINISTRATOR</code></span><br><span>KATEGORIA: <code>USTAWIENIA</code></span></p> 
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <button id="ToHigh">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/load.js"></script>
+
+    <script src="js/scrollTo.js"></script>
+    <script src="js/script1.js"></script>
+    <footer>
+        <div class="copyright">
+            <center>
+
+            
+            <p class="footer">
+                Copyright © AziG.xyz 2022 | Wszelkie prawa zastrzeżone
+            </p>
+        </center>
+        </div>
+    </footer>
+</body>
+</html>

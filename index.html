@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Oficjalna strona bota AziG">
+    <meta name="keywords" content="discord, bot, multi-purpose">
+    <meta name="author" content="AziG Support">
+
+    <title>AziG | Strona Główna</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link rel="icon" href="img/rocket.png">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logo-azig" src="img/rocket.png" width="30" height="30">AZIG</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toogle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainmenu">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="commands.html">Komendy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="joinsupport()">Support Serwer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" onclick="addbot()">Dodaj Bota</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-body p-4" id="introduction">
+                        <header>
+                            <center>
+                                <h1 id="title-first" class="font-weight-bold text-uppercase ml-0 mb-4">Zbuduj najlepszy serwer Discord!</h1>
+
+                                <p class="content">Razem z AziG możesz zbudować bardzo sprawny serwer Discord, który nie będzie miał błędów :)</p>
+
+                                <p class="content">AziG posiada komendy: <span class="cmds"></span> </p>
+
+                                <button class="button-primary" onclick="addbot()">Dodaj bota</button>
+                                <button class="button-secondary" onclick="joinsupport()">Serwer Support</button>
+                            </center>
+                        </header>
+                    </div>
+
+                    <div class="col-lg-5 text-body p-4" id="introduction-2">
+                        <img class="img-fluid" src="img/rocket.png" width="356px" height="356px">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <button id="ToHigh">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/load.js"></script>
+
+    <script src="js/scrollTo.js"></script>
+    <script src="js/script.js"></script>
+    <footer>
+        <div class="copyright">
+            <center>
+
+            
+            <p class="footer">
+                Copyright © AziG.xyz 2022 | Wszelkie prawa zastrzeżone
+            </p>
+        </center>
+        </div>
+    </footer>
+</body>
+</html>
