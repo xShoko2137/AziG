@@ -317,3 +317,13 @@ btn31.addEventListener("click", () => {
     div31.style.display = "none";
   }
 });
+
+let btn32 = document.querySelector("#set-logs");
+let div32 = document.querySelector("#set-logs-content");
+btn32.addEventListener("click", () => {
+  if (div32.style.display === "none") {
+    div32.style.display = "block";
+  } else {
+    div32.style.display = "none";
+  }
+});
